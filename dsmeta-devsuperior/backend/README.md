@@ -7,22 +7,27 @@ Este projeto foi gerado com `Spring Initializr`.
 ✅ API Rest.
 
 ## ✨ Criação do Spring Boot:
+
 - Dependências do [`Spring Initializr`](https://start.spring.io/):
-    - Web
-    - JPA
-    - H2
-    - Security
+
+  - Web
+  - JPA
+  - H2
+  - Security
 
 - Ferramentas:
-    - STS
-    - Postman
-    - Heroku CLI
+
+  - STS
+  - Postman
+  - Heroku CLI
 
 - Importação STS:
-    - File -> Import -> Maven -> Existing Maven Projects
+
+  - File -> Import -> Maven -> Existing Maven Projects
 
 - Configurações Maven `pom.xml`:
-    - Right Button backend -> Maven -> Update Project -> Force Update
+  - Right Button backend -> Maven -> Update Project -> Force Update
+
 ```
 <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
@@ -32,50 +37,15 @@ Este projeto foi gerado com `Spring Initializr`.
 ```
 
 ## 🔏 Configuração de Segurança:
+
 - Estrutura:
-    - package: com.dashboard.dsmeta.config
-    - class: SecurityConfig
-```
-import java.util.Arrays;
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.CorsConfigurationSource;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-
-@Configuration
-@EnableWebSecurity
-public class SecurityConfig {
-
-	@Bean
-	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		
-		http.headers().frameOptions().disable();
-		http.cors().and().csrf().disable();
-		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-		http.authorizeHttpRequests((auth) -> auth.anyRequest().permitAll());
-
-		return http.build();
-	}
-
-	@Bean
-	CorsConfigurationSource corsConfigurationSource() {
-		CorsConfiguration configuration = new CorsConfiguration().applyPermitDefaultValues();
-		configuration.setAllowedMethods(Arrays.asList("POST", "GET", "PUT", "DELETE", "OPTIONS"));
-		final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-		source.registerCorsConfiguration("/**", configuration);
-		return source;
-	}
-}
-```
+  - package: com.dashboard.dsmeta.config
+  - class: SecurityConfig
 
 ## 🗂️ Objeto Relacional JPA:
+
 - Comunicação do Banco de Dados H2: `resources/application.properties`
+
 ```
 spring.datasource.url=jdbc:h2:mem:testdb
 spring.datasource.username=sa
@@ -87,7 +57,9 @@ spring.h2.console.path=/h2-console
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 ```
+
 - Seed do Banco H2: `resources/import.sql`
+
 ```
 INSERT INTO tb_sales(seller_name,visited,deals,amount,date) VALUES ('Barry Allen',121,67,18196.0,'2022-06-16');
 INSERT INTO tb_sales(seller_name,visited,deals,amount,date) VALUES ('Logan',26,14,4255.0,'2022-06-14');
@@ -209,67 +181,17 @@ INSERT INTO tb_sales(seller_name,visited,deals,amount,date) VALUES ('Padme',79,6
 ```
 
 ## 📨 REST API 3 Camadas (RSC):
-- Repository
-    - package: com.dashboard.dsmeta.repositories
-    - interface: SaleRepository
-```
-import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.dashboard.dsmeta.entities.Sale;
+- Repository: Responsável por CRUD
 
-public interface SaleRepository extends JpaRepository<Sale, Long> {
+  - package: com.dashboard.dsmeta.repositories
+  - interface: SaleRepository
 
-}
-```
-- Service
-    - package: com.dashboard.dsmeta.services
-    - class: SaleService
-```
-import java.util.List;
+- Service: Métodos CRUD
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+  - package: com.dashboard.dsmeta.services
+  - class: SaleService
 
-import com.dashboard.dsmeta.entities.Sale;
-import com.dashboard.dsmeta.repositories.SaleRepository;
-
-@Service
-public class SaleService {
-	
-	@Autowired
-	private SaleRepository saleRepository;
-	
-	public List<Sale> selectAllSales() {
-		return saleRepository.findAll();
-	}
-
-}
-```
-- Controller
-    - package: com.dashboard.dsmeta.controllers
-    - class: SaleController
-```
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.dashboard.dsmeta.entities.Sale;
-import com.dashboard.dsmeta.services.SaleService;
-
-@RestController
-@RequestMapping(value="/sales")
-public class SaleController {
-	
-	@Autowired
-	private SaleService saleService;
-	
-	@GetMapping
-	public List<Sale> selectAllSales() {
-		return saleService.selectAllSales();
-	}
-
-}
-```
+- Controller: Intermediador API End-Point
+  - package: com.dashboard.dsmeta.controllers
+  - class: SaleController
