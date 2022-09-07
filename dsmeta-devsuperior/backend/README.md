@@ -218,10 +218,13 @@ INSERT INTO tb_sales(seller_name,visited,deals,amount,date) VALUES ('Padme',79,6
 
 - Variáveis de Ambiente `Config Vars`
 - Arquivo `backend/system.properties`:
+
 ```
 java.runtime.version=17
 ```
+
 - Deploy:
+
 ```
 heroku -v
 heroku login
