@@ -213,3 +213,19 @@ INSERT INTO tb_sales(seller_name,visited,deals,amount,date) VALUES ('Padme',79,6
 - Service:
   - package: com.dashboard.dsmeta.controllers
   - class: SmsService
+
+## Implantação no Heroku:
+
+- Variáveis de Ambiente `Config Vars`
+- Arquivo `backend/system.properties`:
+```
+java.runtime.version=17
+```
+- Deploy:
+```
+heroku -v
+heroku login
+heroku git:remote -a dashboard-dsmeta-higor
+git remote -v
+git subtree push --prefix backend heroku main
+```
