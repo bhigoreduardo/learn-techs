@@ -208,7 +208,7 @@ INSERT INTO tb_sales(seller_name,visited,deals,amount,date) VALUES ('Anakin',84,
 INSERT INTO tb_sales(seller_name,visited,deals,amount,date) VALUES ('Padme',79,68,11976.0,'2021-06-27');
 ```
 
-## 🔏 REST API 3 Camadas (RSC):
+## 📨 REST API 3 Camadas (RSC):
 - Repository
     - package: com.dashboard.dsmeta.repositories
     - interface: SaleRepository
