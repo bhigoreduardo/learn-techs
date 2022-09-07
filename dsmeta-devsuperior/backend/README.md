@@ -195,3 +195,21 @@ INSERT INTO tb_sales(seller_name,visited,deals,amount,date) VALUES ('Padme',79,6
 - Controller: Intermediador API End-Point
   - package: com.dashboard.dsmeta.controllers
   - class: SaleController
+
+## Twilio Send SMS:
+
+- Dependências Maven `pom.xml`:
+
+```
+<dependency>
+  <groupId>com.twilio.sdk</groupId>
+  <artifactId>twilio</artifactId>
+  <version>8.35.0</version>
+</dependency>
+```
+
+- Definir Variáveis de ambiente: `resource/properties`
+  - Right button backend -> Run As -> Run Configurations -> Environment
+- Service:
+  - package: com.dashboard.dsmeta.controllers
+  - class: SmsService
