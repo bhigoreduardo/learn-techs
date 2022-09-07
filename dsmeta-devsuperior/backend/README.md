@@ -32,6 +32,7 @@ Este projeto foi gerado com `Spring Initializr`.
 ```
 
 ## 🔏 Configuração de Segurança:
+- Estrutura:
     - package: com.dashboard.dsmeta.config
     - class: SecurityConfig
 ```
