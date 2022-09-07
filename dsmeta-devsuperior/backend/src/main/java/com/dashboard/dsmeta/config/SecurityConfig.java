@@ -1,40 +1,5 @@
-<h1 align="center">
-  💻<br>Back-End Spring Boot
-</h1>
+package com.dashboard.dsmeta.config;
 
-Este projeto foi gerado com `Spring Initializr`.
-
-✅ API Rest.
-
-## ✨ Criação do Spring Boot:
-- Dependências do [`Spring Initializr`](https://start.spring.io/):
-    - Web
-    - JPA
-    - H2
-    - Security
-
-- Ferramentas:
-    - STS
-    - Postman
-    - Heroku CLI
-
-- Importação STS:
-    - File -> Import -> Maven -> Existing Maven Projects
-
-- Configurações Maven `pom.xml`:
-    - Right Button backend -> Maven -> Update Project -> Force Update
-```
-<plugin>
-	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-resources-plugin</artifactId>
-	<version>3.1.0</version><!--$NO-MVN-MAN-VER$ -->
-</plugin>
-```
-
-## 🔏 Configuração de Segurança:
-    - package: com.dashboard.dsmeta.config
-    - class: SecurityConfig
-```
 import java.util.Arrays;
 
 import org.springframework.context.annotation.Bean;
@@ -71,4 +36,3 @@ public class SecurityConfig {
 		return source;
 	}
 }
-```
