@@ -34,3 +34,8 @@ import 'react-datepicker/dist/react-datepicker.css'
 ## 🗂️ Importação Axios:
 
 - Instalação: `yarn add axios@0.27.2`
+
+## 🗂️ Set BaseURL:
+
+- package: utils
+- request: `export const BASE_URL = import.meta.env.VITE_BACKEND_URL ?? "http://localhost:8080"`
