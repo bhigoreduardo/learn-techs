@@ -19,7 +19,10 @@ function Table() {
   const [sales, setSales] = useState<Sale[]>([]);
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/sales`).then((response) => {
+    const min = minDate.toISOString().slice(0, 10);
+    const max = maxDate.toISOString().slice(0, 10);
+
+    axios.get(`${BASE_URL}/sales?minDate=${min}&maxDate=${max}`).then((response) => {
       setSales(response.data.content);
     });
   }, []);
