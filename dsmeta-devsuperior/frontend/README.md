@@ -43,3 +43,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 ## 📜 Criar Model Sales:
 
 - package: models
+
+## Importação Toastity Message:
+
+- Instalação: `yarn add react-toastify@9.0.5`
