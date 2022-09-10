@@ -44,7 +44,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 
 - package: models
 
-## Importação Toastity Message:
+## 📥 Importação Toastity Message:
 
 - Instalação: `yarn add react-toastify@9.0.5`
 
