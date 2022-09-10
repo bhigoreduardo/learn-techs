@@ -1,11 +1,19 @@
-import Header from './components/Header';
+import Header from "./components/Header";
+import Table from "./components/Table";
 
 function App() {
   return (
     <>
-    <Header />
+      <Header />
+      <main>
+        <section id="sales">
+          <div className="dsmeta-container">
+            <Table />
+          </div>
+        </section>
+      </main>
     </>
-  )
+  );
 }
 
 export default App;
