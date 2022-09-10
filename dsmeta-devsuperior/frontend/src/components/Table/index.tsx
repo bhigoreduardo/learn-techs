@@ -25,7 +25,7 @@ function Table() {
     axios.get(`${BASE_URL}/sales?minDate=${min}&maxDate=${max}`).then((response) => {
       setSales(response.data.content);
     });
-  }, []);
+  }, [minDate, maxDate]);
 
   return (
     <>
