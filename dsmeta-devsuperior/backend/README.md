@@ -36,7 +36,7 @@ Este projeto foi gerado com `Spring Initializr`.
 </plugin>
 ```
 
-## 🔏 Configuração de Segurança:
+## 🔏 Configuração de Segurança (CORS):
 
 - Estrutura:
   - package: com.dashboard.dsmeta.config
