@@ -230,5 +230,5 @@ heroku -v
 heroku login
 heroku git:remote -a dashboard-dsmeta-higor
 git remote -v
-git subtree push --prefix backend heroku main
+git subtree push --prefix dsmeta-devsuperior/backend heroku main
 ```
