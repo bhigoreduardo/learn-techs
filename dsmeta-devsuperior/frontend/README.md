@@ -20,11 +20,16 @@ Este projeto foi gerado com `Vite-TS`.
     - ESLint
     - JSX HTML
 
-## 🔏 Configuração de Segurança:
+## 🗓️ Importação Date Picker:
 
-- Estrutura:
-  - package: com.dashboard.dsmeta.config
-  - class: SecurityConfig
+- Instalação: `yarn add react-datepicker@4.8.0 @types/react-datepicker@4.4.2`
+
+- Importação:
+
+```
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css'
+```
 
 ## 🗂️ Objeto Relacional JPA:
 
