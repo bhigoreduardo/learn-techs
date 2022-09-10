@@ -1,3 +1,4 @@
+import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -6,6 +7,12 @@ import Button from "../Button";
 import "./styles.css";
 
 function Table() {
+  const minValue = new Date(new Date().setDate(new Date().getDate() - 365));
+  const maxValue = new Date();
+
+  const [minDate, setMinDate] = useState(minValue);
+  const [maxDate, setMaxDate] = useState(maxValue);
+
   return (
     <>
       <div className="dsmeta-card">
@@ -13,16 +20,16 @@ function Table() {
         <div>
           <div className="dsmeta-form-control-container">
             <DatePicker
-              selected={new Date()}
-              onChange={(date: Date) => {}}
+              selected={minDate}
+              onChange={(date: Date) => setMinDate(date)}
               dateFormat="dd/MM/yyyy"
               className="dsmeta-form-control"
             />
           </div>
           <div className="dsmeta-form-control-container">
             <DatePicker
-              selected={new Date()}
-              onChange={(date: Date) => {}}
+              selected={maxDate}
+              onChange={(date: Date) => setMaxDate(date)}
               dateFormat="dd/MM/yyyy"
               className="dsmeta-form-control"
             />
