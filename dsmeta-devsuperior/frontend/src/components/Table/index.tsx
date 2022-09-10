@@ -1,3 +1,5 @@
+import Button from "../Button";
+
 import "./styles.css";
 
 function Table() {
@@ -38,7 +40,7 @@ function Table() {
                 <td>R$ 55300.00</td>
                 <td>
                   <div className="dsmeta-red-btn-container">
-                    <button>Enviar</button>
+                    <Button />
                   </div>
                 </td>
               </tr>
