@@ -1,3 +1,6 @@
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 import Button from "../Button";
 
 import "./styles.css";
@@ -9,10 +12,20 @@ function Table() {
         <h2 className="dsmeta-sales-title">Vendas</h2>
         <div>
           <div className="dsmeta-form-control-container">
-            <input type="date" className="dsmeta-form-control" />
+            <DatePicker
+              selected={new Date()}
+              onChange={(date: Date) => {}}
+              dateFormat="dd/MM/yyyy"
+              className="dsmeta-form-control"
+            />
           </div>
           <div className="dsmeta-form-control-container">
-            <input type="date" className="dsmeta-form-control" />
+            <DatePicker
+              selected={new Date()}
+              onChange={(date: Date) => {}}
+              dateFormat="dd/MM/yyyy"
+              className="dsmeta-form-control"
+            />
           </div>
         </div>
 
