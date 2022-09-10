@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { Sale } from "../../models/sale";
 import { BASE_URL } from "../../utils/request";
 
 import Button from "../Button";
@@ -15,9 +16,11 @@ function Table() {
   const [minDate, setMinDate] = useState(minValue);
   const [maxDate, setMaxDate] = useState(maxValue);
 
+  const [sales, setSales] = useState<Sale[]>([]);
+
   useEffect(() => {
     axios.get(`${BASE_URL}/sales`).then((response) => {
-      console.log(response.data);
+      setSales(response.data.content);
     });
   }, []);
 
