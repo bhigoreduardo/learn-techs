@@ -47,3 +47,10 @@ import 'react-datepicker/dist/react-datepicker.css'
 ## Importação Toastity Message:
 
 - Instalação: `yarn add react-toastify@9.0.5`
+
+- Deploy Netlify:
+  - Base directory: dsmeta-devsuperior/frontend
+  - Build command: yarn build
+  - Publish directory: dsmeta-devsuperior/frontend/dist
+  - Variáveis de ambiente: VITE_BACKEND_URL `https://dashboard-dsmeta-higor.herokuapp.com`
+  - Site settings: Domain Management
