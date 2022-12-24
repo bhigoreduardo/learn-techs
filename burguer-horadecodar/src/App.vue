@@ -1,15 +1,18 @@
 <template>
   <NavbarVue :imgSrc="imgSrc" :imgAlt="imgAlt" />
   <router-view />
+  <FooterVue />
 </template>
 
 <script>
 import NavbarVue from './components/Navbar.vue';
+import FooterVue from './components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
-    NavbarVue
+    NavbarVue,
+    FooterVue
   },
   data() {
     return {
