@@ -1,10 +1,22 @@
 <template>
+  <NavbarVue :imgSrc="imgSrc" :imgAlt="imgAlt" />
   <router-view />
 </template>
 
 <script>
+import NavbarVue from './components/Navbar.vue';
+
 export default {
   name: 'App',
+  components: {
+    NavbarVue
+  },
+  data() {
+    return {
+      imgSrc: '/images/logo.png',
+      imgAlt: 'Burguer'
+    }
+  }
 }
 </script>
 
