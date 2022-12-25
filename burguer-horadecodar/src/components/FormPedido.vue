@@ -11,7 +11,6 @@
 
 <script>
 import axios from 'axios';
-import qs from 'qs';
 
 import InputTextVue from './formComponents/InputText.vue';
 import SelectVue from './formComponents/Select.vue';
@@ -80,6 +79,7 @@ export default {
         async savePedido(event) {
             event.preventDefault();
 
+            
             const burguer = {
                 nome: this.nome,
                 pao: this.pao,
@@ -101,9 +101,10 @@ export default {
             */
 
             // axios Request
-            axios.post(`${this.apiUrl}/burgers`, qs.stringify(burguer))
+            axios.post(`${this.apiUrl}/burgers`, burguer)
                 .then(res => this.message = `Pedido n° ${res.data.id} efetuado por ${res.data.nome} encontra-se: '${res.data.status}'`)
                 .catch(err => console.log(err));
+            
         }
     }
 }

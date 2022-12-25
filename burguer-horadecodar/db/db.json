@@ -79,97 +79,16 @@
   ],
   "burgers": [
     {
-      "nome": "Higor",
-      "pao": "Italiano Branco",
-      "carne": "Maminha",
-      "adicionais": [
-        "Cheddar"
-      ],
-      "status": "Em produção",
-      "id": 1
-    },
-    {
-      "nome": "Eduardo",
-      "pao": "Parmesão e Orégano",
-      "carne": "Maminha",
+      "nome": "Higor Eduardo",
+      "pao": "Integral",
+      "carne": "Picanha",
       "adicionais": [
         "Bacon",
-        "Salame",
+        "Tomate",
         "Cheddar"
       ],
-      "status": "Solicitado",
-      "id": 2
-    },
-    {
-      "nome": "Batista",
-      "pao": "Parmesão e Orégano",
-      "carne": "Alcatra",
-      "adicionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 3
-    },
-    {
-      "nome": "Higor",
-      "pao": "Parmesão e Orégano",
-      "carne": "Alcatra",
-      "adicionais": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Solicitado",
-      "id": 4
-    },
-    {
-      "nome": "Higor",
-      "pao": "3 Queijos",
-      "carne": "Maminha",
-      "adicionais[0]": "Salame",
-      "status": "Solicitado",
-      "id": 5
-    },
-    {
-      "nome": "Eduardo",
-      "pao": "3 Queijos",
-      "carne": "Maminha",
-      "adicionais[0]": "Salame",
-      "adicionais[1]": "Cheddar",
       "status": "Solicitado",
       "id": 6
-    },
-    {
-      "nome": "asdasd",
-      "pao": "Italiano Branco",
-      "carne": "Alcatra",
-      "adicionais[0]": "Bacon",
-      "adicionais[1]": "Salame",
-      "status": "Solicitado",
-      "id": 7
-    },
-    {
-      "nome": "",
-      "pao": "",
-      "carne": "",
-      "status": "Solicitado",
-      "id": 8
-    },
-    {
-      "nome": "Higor",
-      "pao": "Italiano Branco",
-      "carne": "Maminha",
-      "adicionais[0]": "Bacon",
-      "status": "Solicitado",
-      "id": 9
-    },
-    {
-      "nome": "Eduardo",
-      "pao": "Parmesão e Orégano",
-      "carne": "Alcatra",
-      "adicionais[0]": "Bacon",
-      "adicionais[1]": "Salame",
-      "status": "Solicitado",
-      "id": 10
     }
   ]
 }

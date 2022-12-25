@@ -1,4 +1,5 @@
 <template>
+    <MessageVue :message="message" @closeMessage="message = null" />
     <div class="dashboard">
         <div class="heading">
             <span>#</span>
@@ -33,12 +34,100 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 import SelectVue from './formComponents/Select.vue';
+import MessageVue from './Message.vue';
 
 export default {
     name: 'DashboardVue',
     components: {
-        SelectVue
+        SelectVue,
+        MessageVue
+    },
+    data() {
+        return {
+            apiUrl: 'http://localhost:3000',
+            pedidos: [],
+            status: [],
+            message: null
+        }
+    },
+    mounted() {
+        this.findAllPedidos();
+        this.findAllStatus();
+    },
+    methods: {
+        async findAllPedidos() {
+            // fetch Request
+            /*
+            await fetch(`${this.apiUrl}/burgers`)
+                .then(res => res.json())
+                .then(data => this.pedidos = data)
+                .catch(err => console.log(err));
+            */
+
+            // axios Request
+            axios.get(`${this.apiUrl}/burgers`)
+                .then(res => this.pedidos = res.data)
+                .catch(err => console.log(err));
+        },
+        async findAllStatus() {
+            // fetch Request
+            /*
+            await fetch(`${this.apiUrl}/status`)
+                .then(res => res.json())
+                .then(data => this.status = data)
+                .catch(err => console.log(err));
+            */
+
+            // axios Request
+            axios.get(`${this.apiUrl}/status`)
+                .then(res => this.status = res.data)
+                .catch(err => console.log(err));
+        },
+        async updatePedido(event, id) {
+            const status = event.target.value;
+
+            // fetch Request
+            /*
+            await fetch(`${this.apiUrl}/burgers/${id}`, {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json'},
+                body: JSON.stringify({status: status})
+            })
+                .then(res => res.json())
+                .then(data => this.message = `Pedido n° ${data.id} encontra-se: '${data.status}'`)
+                .catch(err => console.log(err));
+            */
+            
+            // axios Request
+            axios.patch(`${this.apiUrl}/burgers/${id}`, {status: status})
+                .then(res => this.message = `Pedido n° ${res.data.id} encontra-se: '${res.data.status}'`)
+                .catch(err => console.log(err));
+        },
+        async deletePedido(id) {
+            // fetch Request
+            /*
+            await fetch(`${this.apiUrl}/burgers/${id}`, {
+                method: 'DELETE',
+            })
+                .then(res => res.json())
+                .then(data => {
+                    this.pedidos = this.pedidos.filter(pedido => pedido.id != id);
+                    this.message = `Pedido n° ${id} encontra-se: 'Cancelado'`;
+                })
+                .catch(err => console.log(err));
+            */
+
+            // axios Request
+            axios.delete(`${this.apiUrl}/burgers/${id}`)
+                .then(res => {
+                    this.pedidos = this.pedidos.filter(pedido => pedido.id != id);
+                    this.message = `Pedido n° ${id} encontra-se: 'Cancelado'`;
+                })
+                .catch(err => console.log(err));
+        }
     }
 }
 </script>
