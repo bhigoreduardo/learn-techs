@@ -3,6 +3,7 @@
         <router-link to="/" id="logo-router"><img :src="imgSrc" :alt="imgAlt" id="logo" /></router-link>
         <router-link to="/">Home</router-link>
         <router-link to="/pedidos">Pedidos</router-link>
+        <router-link to="/topicos">Tópicos</router-link>
     </nav>
 </template>
 
