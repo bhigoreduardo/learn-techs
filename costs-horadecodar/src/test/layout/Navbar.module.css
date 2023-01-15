@@ -1,0 +1,21 @@
+.header {
+  padding: 10px 6%;
+  background-color: #222;
+}
+
+.header,
+.header__navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header__navbar ul {
+  list-style: none;
+  font-size: 14px;
+}
+
+.header__navbar ul a {
+  color: #fff;
+}

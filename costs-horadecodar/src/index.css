@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+}
+
+html,
+body,
+#root {
+  background-color: #efefef;
+  height: 100%;
+}
+
+.test__container {
+  padding: 10px 6%;
+}
+
+.test__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.test__wrapper > div {
+  padding: 10px;
+  border: 1px solid #222;
+}

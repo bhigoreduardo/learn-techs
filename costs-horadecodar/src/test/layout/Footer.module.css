@@ -1,0 +1,25 @@
+.footer {
+  padding: 10px 6%;
+  background-color: #222;
+}
+
+.footer,
+.footer__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.footer {
+  flex-direction: column;
+}
+
+.footer__icons {
+  list-style: none;
+}
+
+.footer__icons li svg {
+  color: #fff;
+}
