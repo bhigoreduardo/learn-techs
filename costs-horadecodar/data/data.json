@@ -20,13 +20,19 @@
   "projetos": [
     {
       "nome": "Wireframe",
-      "orcamento": "6000",
+      "orcamento": "4500",
       "categoria": {
         "id": "3",
         "nome": "Design"
       },
-      "custo": 0,
-      "servicos": [],
+      "custo": 380,
+      "servicos": [
+        {
+          "nome": "Wireframe",
+          "custo": "380",
+          "id": "b782e2f3-ef45-4fa6-9dd3-4555787ff707"
+        }
+      ],
       "id": 1
     }
   ]

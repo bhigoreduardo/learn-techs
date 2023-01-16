@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import FlexBetween from "../components/FlexBetween";
 import Button from "../components/Button";
-import Card from "../components/Card";
+import Card from "../components/ProjectCard";
 
 import Message from "../layout/Message";
 import Load from "../layout/Load";

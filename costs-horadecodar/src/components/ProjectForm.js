@@ -6,7 +6,7 @@ import Submit from "./Submit";
 
 import "./Form.css";
 
-const ProjectForm = ({ dadosProjeto, handleOnSubmit }) => {
+const ProjectForm = ({ dadosProjeto, handleOnSubmit, buttonValue }) => {
   const [projeto, setProjeto] = useState(dadosProjeto || {});
   const [categorias, setCategorias] = useState([]);
 
@@ -63,7 +63,7 @@ const ProjectForm = ({ dadosProjeto, handleOnSubmit }) => {
         handleOnChange={handleSelectProjeto}
         options={categorias}
       />
-      <Submit value="Cadastrar projeto" />
+      <Submit value={buttonValue} />
     </form>
   );
 };
