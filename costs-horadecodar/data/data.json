@@ -20,7 +20,7 @@
   "projetos": [
     {
       "nome": "Wireframe",
-      "orcamento": "1000",
+      "orcamento": "6000",
       "categoria": {
         "id": "3",
         "nome": "Design"
@@ -28,17 +28,6 @@
       "custo": 0,
       "servicos": [],
       "id": 1
-    },
-    {
-      "nome": "Back end",
-      "orcamento": "3000",
-      "categoria": {
-        "id": "2",
-        "nome": "Desenvolvimento"
-      },
-      "custo": 0,
-      "servicos": [],
-      "id": 2
     }
   ]
 }

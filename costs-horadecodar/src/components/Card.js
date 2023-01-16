@@ -3,20 +3,27 @@ import { BsPencil, BsFillTrashFill } from "react-icons/bs";
 
 import "./Card.css";
 
-const Card = ({ id, nome, orcamento, categoria }) => {
+const Card = ({ id, nome, orcamento, categoria, handleOnRemove }) => {
+  const removeProjeto = (e) => {
+    e.preventDefault();
+    handleOnRemove(id);
+  };
+
   return (
     <div className="card">
       <h4>{nome}</h4>
-      <p>Orçamento: {orcamento}</p>
-      <p>
-        <span className={`category ${categoria.toLoweCase()}`}></span>
+      <p>Orçamento: R$ {orcamento}</p>
+      <p className="category">
+        <span className={`${categoria.toLowerCase()}`}></span>
         {categoria}
       </p>
-      <div>
+      <div className="button-group">
         <Link to={`/projetos/${id}`}>
           <BsPencil />
         </Link>
-        <BsFillTrashFill />
+        <button>
+          <BsFillTrashFill onClick={removeProjeto} />
+        </button>
       </div>
     </div>
   );
