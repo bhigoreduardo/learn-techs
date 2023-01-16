@@ -1,0 +1,44 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Infraestrutura"
+    },
+    {
+      "id": 2,
+      "nome": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "nome": "Design"
+    },
+    {
+      "id": 4,
+      "nome": "Planejamento"
+    }
+  ],
+  "projetos": [
+    {
+      "nome": "Wireframe",
+      "orcamento": "1000",
+      "categoria": {
+        "id": "3",
+        "nome": "Design"
+      },
+      "custo": 0,
+      "servicos": [],
+      "id": 1
+    },
+    {
+      "nome": "Back end",
+      "orcamento": "3000",
+      "categoria": {
+        "id": "2",
+        "nome": "Desenvolvimento"
+      },
+      "custo": 0,
+      "servicos": [],
+      "id": 2
+    }
+  ]
+}

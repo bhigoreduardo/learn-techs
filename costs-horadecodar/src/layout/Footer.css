@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+  padding: 20px 6%;
+  background-color: #222;
+}
+
+.footer .footer--wrapper-icons svg {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 5px;
+  transition: color 300ms ease;
+}
+
+.footer .footer--wrapper-icons svg:hover,
+.footer .footer--credit span {
+  color: #ffbb33;
+}
+
+.footer .footer--credit {
+  text-align: center;
+  color: #fff;
+}

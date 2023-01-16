@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 6%;
+  background-color: #222;
+}
+
+.header .header--logo img {
+  max-width: 40px;
+}
+
+.header .header--navbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .header--navbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 300ms ease;
+}
+
+.header .header--navbar a:hover {
+  color: #ffbb33;
+}
