@@ -1,7 +1,7 @@
 <h1 align="center">
   💻<br>Costs React.js
 </h1>
-<img src="" alt="Cover projeto" />
+<img src="src/images/cover.png" alt="Cover projeto" />
 
 ✅ Front React.js
 ✅ Design Responsivo
